@@ -1,0 +1,34 @@
+#container {
+    text-align: center;
+}
+
+#wordContainer {
+    position: relative;
+    background-color: white;
+    padding: 50px 0px;
+}
+
+#curtain {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    width: 0%;
+    right:0;
+    z-index: 5;
+    background-color: white;
+}
+
+#word {
+    font-size: xx-large;
+    text-align: center;
+}
+
+#buttons {
+    padding-top: 40vh;
+    
+}
+
+#buttons button {
+    max-width: 40%;
+}
