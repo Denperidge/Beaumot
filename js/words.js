@@ -48,11 +48,10 @@ function NewWord() {
         if (wordsIndex >= words.length) {
             Pause();
             $("#word").text("Klaar!");
-            return;
+        } else {
+            $("#word").text(words[wordsIndex]);
+            wordsIndex++;
         }
-
-        $("#word").text(words[wordsIndex]);
-        wordsIndex++;
     
         // Open curtain
         $("#curtain").animate({
