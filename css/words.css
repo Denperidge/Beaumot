@@ -2,14 +2,19 @@
     text-align: center;
 }
 
+#wordBackground
+{
+    padding: 50px 0px;
+    background-color: white;
+}
+
 #wordContainer {
     position: relative;
-    background-color: white;
-    padding: 50px 0px;
+    display: inline;
+    padding: 20px 0px;
 }
 
 #curtain {
-    margin: 0;
     position: absolute;
     top: 0;
     bottom:0;

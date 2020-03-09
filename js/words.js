@@ -20,8 +20,8 @@ function Back() {
 
 function Start() {
     // * 1000 --> setInterval uses ms, not s
-    // + curtainspeed*2 to make sure the curtain open/close doesn't use any time, 250 extra for margin
-    newWordInterval = setInterval(NewWord, (seconds * 1000) + (curtainSpeed * 2) + 250);
+    // + curtainspeed*2 to make sure the curtain open/close doesn't use any time
+    newWordInterval = setInterval(NewWord, (seconds * 1000) + (curtainSpeed * 2));
     $("#pause").text("Pauze");
 }
 
@@ -39,20 +39,22 @@ function PauseOrStart() {
 }
 
 function NewWord() {
+    // Close curtain
     $("#curtain").animate({
         width: "100%"
     }, curtainSpeed);
-    
-    if (wordsIndex >= words.length) {
-        Pause();
-        $("#word").text("Klaar!");
-        return;
-    }
 
     setTimeout(function(){
+        if (wordsIndex >= words.length) {
+            Pause();
+            $("#word").text("Klaar!");
+            return;
+        }
+
         $("#word").text(words[wordsIndex]);
         wordsIndex++;
     
+        // Open curtain
         $("#curtain").animate({
             width: "0%"
         }, curtainSpeed);
