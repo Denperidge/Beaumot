@@ -15,7 +15,7 @@ $(document).ready(function(){
 });
 
 function Back() {
-    window.location.href = "/";
+    window.location.href = "index.html";
 }
 
 function Start() {
